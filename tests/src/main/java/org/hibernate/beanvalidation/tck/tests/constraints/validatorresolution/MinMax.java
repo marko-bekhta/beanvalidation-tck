@@ -17,12 +17,7 @@ public class MinMax {
 	@Max(20l)
 	Number number;
 
-	@Min(10l)
-	@Max(20l)
-	String numberAsString;
-
-	public MinMax(String stringNumber, Number number) {
-		this.numberAsString = stringNumber;
+	public MinMax(Number number) {
 		this.number = number;
 	}
 }

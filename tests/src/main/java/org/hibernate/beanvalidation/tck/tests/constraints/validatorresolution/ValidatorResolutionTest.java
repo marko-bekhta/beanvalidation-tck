@@ -338,11 +338,10 @@ public class ValidatorResolutionTest extends AbstractTCKTest{
 	@Test
 	@SpecAssertion(section = Sections.CONSTRAINTDECLARATIONVALIDATIONPROCESS_VALIDATIONROUTINE_TYPEVALIDATORRESOLUTION, id = "i")
 	public void testResolutionOfMinMaxForDifferentTypes() {
-		MinMax minMax = new MinMax( "5", 5 );
+		MinMax minMax = new MinMax( 5 );
 		Set<ConstraintViolation<MinMax>> constraintViolations = getValidator().validate( minMax );
 		assertThat( constraintViolations ).containsOnlyViolations(
-				violationOf( Min.class ).withProperty( "number" ),
-				violationOf( Min.class ).withProperty( "numberAsString" )
+				violationOf( Min.class ).withProperty( "number" )
 		);
 	}
 
