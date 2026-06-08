@@ -1,0 +1,16 @@
+<!--
+
+    Jakarta Validation TCK
+
+    License: Apache License, Version 2.0
+    See the license.txt file in the root directory or <http://www.apache.org/licenses/LICENSE-2.0>.
+
+-->
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Jakarta-Validation-Module-Path-TCK" verbose="1">
+    <test name="Module-Path-Tests">
+        <packages>
+            <package name="org.hibernate.beanvalidation.tck.moduletests.tests.*"/>
+        </packages>
+    </test>
+</suite>
