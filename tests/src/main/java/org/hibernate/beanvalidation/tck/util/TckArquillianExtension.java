@@ -149,12 +149,7 @@ public class TckArquillianExtension extends ArquillianExtension {
 			invocation.skip();
 			return;
 		}
-		if ( isInsideArquillian( extensionContext ) ) {
-			super.interceptBeforeEachMethod( invocation, invocationContext, extensionContext );
-		}
-		else {
-			invocation.proceed();
-		}
+		super.interceptBeforeEachMethod( invocation, invocationContext, extensionContext );
 	}
 
 	@Override
@@ -165,12 +160,7 @@ public class TckArquillianExtension extends ArquillianExtension {
 			invocation.skip();
 			return;
 		}
-		if ( isInsideArquillian( extensionContext ) ) {
-			super.interceptAfterEachMethod( invocation, invocationContext, extensionContext );
-		}
-		else {
-			invocation.proceed();
-		}
+		super.interceptAfterEachMethod( invocation, invocationContext, extensionContext );
 	}
 
 	private static void validateSingleTestMethod(Class<?> testClass) {

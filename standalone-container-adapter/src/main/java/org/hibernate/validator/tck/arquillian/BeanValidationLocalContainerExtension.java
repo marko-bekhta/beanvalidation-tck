@@ -15,7 +15,8 @@ import org.jboss.arquillian.core.spi.LoadableExtension;
 public class BeanValidationLocalContainerExtension implements LoadableExtension {
 	@Override
 	public void register(ExtensionBuilder builder) {
-		builder.service( DeployableContainer.class, BeanValidationLocalContainer.class );
+		builder.service( DeployableContainer.class, BeanValidationLocalContainer.class )
+				.observer( RunModeEventHandler.class );
 	}
 }
 
